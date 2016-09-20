@@ -18,7 +18,7 @@ postRouter.route("/:id")
 	.delete(postsController.delete)
 
 //Edit, hardest to remember...
-postRouter.get("/:id/edit",postsController.show);
+postRouter.get("/:id/edit",postsController.edit);
 
 postRouter.get("/news/",newsController.index);
 module.exports = postRouter;

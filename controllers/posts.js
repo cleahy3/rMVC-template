@@ -25,10 +25,10 @@ function indexPost(req,res){
 function showPost(req,res){
 	var post = posts[req.params.id];
 	res.render("posts/show",
-	{
-	title:"Posts",
-	post:post
-	});
+		{
+			title:"Posts",
+			post:post
+		});
 }
 //NEW
 function newPost(req,res){
@@ -48,7 +48,7 @@ function deletePost(req,res){
 }
 //EDIT
 function editPost(req,res){
-	res.send("Edit");
+	res.send("Edit:1");
 }
 module.exports={
 	index:indexPost,
