@@ -15,7 +15,7 @@ postRouter.route("/")
 postRouter.route("/:id")
 	.get(postsController.show)
 	.put(postsController.update)
-	.delete(postsController.delete)
+	.delete(postsController.delete);
 
 //Edit, hardest to remember...
 postRouter.get("/:id/edit",postsController.edit);
