@@ -32,7 +32,7 @@ function showPost(req,res){
 }
 //NEW
 function newPost(req,res){
-	res.send("New");
+	res.render("posts/new",{title: 'New Post'});
 }
 //CREATE
 function createPost(req,res){
@@ -48,7 +48,11 @@ function deletePost(req,res){
 }
 //EDIT
 function editPost(req,res){
-	res.send("Edit:1");
+	var post = posts[req.params.id];
+	res.render("posts/edit",{
+		post:post,
+		title:'Edit Post: '+ post.id
+	});
 }
 module.exports={
 	index:indexPost,
