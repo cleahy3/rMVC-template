@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+	</head>
+	<body>
+		<nav>
+			<a href="/">Posts</a>
+			<a href="/new">New post</a>
+		</nav>
+		<h1>Welcome to the homepage!</h1>
+		<% for(var i = 0; i<posts.length; i++){ %>
+			<h2><%= posts[i].title %> </h2>
+			<p> <%= posts[i].body %> </p>
+		<%}%>
+	</body>
+</html>
